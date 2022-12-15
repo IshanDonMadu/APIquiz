@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web API quiz</title>
+    <!--style sheet linked -->
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <!--Nav Bar Start from here-->
+        <nav class="nav nav-fill">
+            <a class="nav-link" href="../index.html">Return to Quiz</a>
+            <a class="nav-link" data-toggle="modal" data-target="#settingsModal"><img src="./png.png" alt="Settings icon" style="width: 20px;"></a>
+        </nav>
+        </nav>
+    </header>
+    <!--container Start from here-->
+    <main class="container">
+        
+        <div class="card text-center">
+            <div class="card-header">
+              Your Score..!
+            </div>
+            <div class="card-body" >
+              <table id="table">
+              </table>
+              <a type="button" class="btn btn-primary" id="return" href="../index.html">Try Again?</a>
+              <button type="button" class="btn btn-danger" id="clear">Clear High Scores</button>
+            </div>
+            <div class="card-footer text-muted">
+            Good Luck..!
+            </div>
+          </div>
+    </main>
+
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <label for="timerLength">Timer Length: (seconds)</label>
+            <input type="number" id="timerLength" placeholder="75" value="75"  min="0" max="180">
+            <br>
+            <label for="difficulty">Difficulty: </label>
+            <select name="difficulty" id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="moderate">Moderate</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <!--footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="settings()" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Quiz Script -->
+    <script src="./score.js"></script> 
+  </body>
+    
+
+</html>
